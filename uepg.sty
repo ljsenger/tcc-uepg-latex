@@ -1,0 +1,79 @@
+%ljsenger
+\ProvidesPackage{uepg}[2014/09/01 Criacao desta customizacao do abnTeX2]
+
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \ABNTEXchapterfont\Large 
+    
+    	UNIVERSIDADE ESTADUAL DE PONTA GROSSA\\
+    	SETOR DE CIÊNCIAS AGRÁRIAS E DE TECNOLOGIA \\
+    	DEPARTAMENTO DE INFORMÁTICA \\
+    
+    \vspace*{4cm}
+    
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{4cm}
+    \begin{center}
+    \ABNTEXchapterfont\LARGE\imprimirtitulo
+    \end{center}
+    \vfill
+    
+    \large\imprimirlocal\\
+    \large\imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% folha de rosto 
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+%{\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS}
+    
+ %   \vspace*{1cm}
+    
+{\ABNTEXchapterfont\large\imprimirautor}
+
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\Large\imprimirtitulo
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo\\
+  \imprimirorientador\\
+  \abntex@ifnotempty{\imprimircoorientador}{%
+  	{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+  }
+  \end{minipage}%
+  \vspace*{\fill}
+}%
+
+
+\vspace*{\fill}
+
+%{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
