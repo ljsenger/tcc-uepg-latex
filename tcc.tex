@@ -28,7 +28,17 @@ brazil				% o último idioma é o principal do documento
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação]
 \usepackage{uepg}
-\usepackage{lipsum}				
+\usepackage{lipsum}		
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{paralist}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{longtable}	
+\usepackage{listings}
+\usepackage{gantt}
+\usepackage{inconsolata}
+	
 
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf,
@@ -59,6 +69,11 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 % -- ljsenger
 \renewcommand{\rmdefault}{phv} % Arial
 \renewcommand{\sfdefault}{phv} % Arial
+
+% formatacao de codigo fonte
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de códigos}
+
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
@@ -168,7 +183,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\end{dedicatoria}
 	
 	\begin{agradecimentos}
-		Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
+		Este documento utiliza a classe abntex, seguem os agradecimentos para os criadores do pacote. Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
 		Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
 		Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
 			projeto abn\TeX\ foram extraídos de
@@ -271,7 +286,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\include{revisao}
 	\include{metodologia}
 	\include{resultados}
-	\include{conclusoes}
+	\include{conclusao}
 	
 	\postextual
 

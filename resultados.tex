@@ -1,0 +1,28 @@
+\chapter{Resultados}
+
+De maneira geral, a medida que aumenta-se o número de pares também aumenta a eficiência (Tabela~\ref{tab:p2p}). O \textit{rank} 0, que não realiza processamento, começa a representar uma porcentagem cada vez menor para o calculo da eficiência. Considerando 3 pares, o \textit{rank} 0 representa 33\% do calculo da eficiência, já considerando 5 pares o mesmo representa 20\%, assim a medida que aumentam-se os pares a eficiência aumenta. Está melhoria ocorre até certo ponto, pois a comunicação entre processos aumenta e medida que adicionamos novos pares. É importante ressaltar que esta particularidade ocorre devido ao \textit{rank} 0 não processar nenhuma atividade e participar do calculo de eficiência, e com o aumento do números de pares a eficiência diminua devido as taxas de comunicação. Se desconsiderado o \textit{rank} 0, a eficiência observada inicia elevada e na medida que aumentam-se os pares a eficiência deve diminuir devido à comunicação entre processos da rede.
+
+\begin{table}[!h]
+\caption{ Resumo dos resultados modo P2P - 10 \textit{Folds} }
+\label{tab:p2p}
+\centering
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{ccccccc}
+\hline
+Grupo &Grupo 1 &Grupo 2 &Grupo 3 &Grupo 4 &Grupo 5 &Grupo 6 \\
+\hline
+Experimento &Sequencial &3-Pares &5-Pares &7-Pares &9-Pares &11-Pares \\
+\hline
+Média &301,92 &146,07 &91,22 &61,44 &60,98 &31,97 \\
+\hline
+Desvio Padrão &1,05 &0,88 &1,10 &0,69 &0,75 &0,82 \\
+\hline
+\multicolumn{2}{c}{\textit{SpeedUp}} &2,07 &3,31 &4,91 &4,95 &9,44 \\
+\hline
+\multicolumn{2}{c}{Eficiência} &0,69 &0,66 &0,70 &0,55 &0,86 \\
+\hline
+\end{tabular}
+%\\
+%\singlespacing
+%\text{\footnotesize Fonte: O autor}
+\end{table}
