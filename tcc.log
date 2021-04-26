@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.26)  26 APR 2021 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.26)  26 APR 2021 10:25
 entering extended mode
 **./tcc.tex
 (tcc.tex
@@ -1362,19 +1362,20 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 209.
  [2
 
-]
+] (agradecimentos.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 217.
+(Font)              <10> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 217.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 217.
- [3
+(Font)              <5> on input line 5.
+) [3
 
 
-] [4
+] (epigrafe.tex [4
 
-] [5
+]) (resumo.tex)
+[5
 
 ] (tcc.lof) [6
 
@@ -1386,17 +1387,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 	\pdfbookmark[0]{\lstlistlistingname}{lot}
+l.256 	\pdfbookmark[0]{\lstlistlistingname}{lot}
                                                  (tcc.lol) [9
 
-] [10
+] (siglas.tex)
+[10
 
 
-] [11
+] (simbolos.tex) [11
 
 
-]
-(tcc.toc
+] (tcc.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 36.
 ) [12
@@ -1486,7 +1487,7 @@ Overfull \hbox (31.06206pt too wide) in paragraph at lines 99--101
 
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 320.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 285.
  [17] [18]
 \openout2 = `resultados.aux'.
 
@@ -1516,7 +1517,7 @@ bibitemlist
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 349.
+(hyperref)                removing `\uppercase' on input line 314.
 
 [23
 
@@ -1528,7 +1529,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 377.
+(hyperref)                removing `\uppercase' on input line 342.
 
 [26
 
@@ -1563,10 +1564,10 @@ Package rerunfilecheck Info: File `tcc.brf' has not changed.
 (rerunfilecheck)             Checksum: 58AB79047DC629E356ACDFF8796F54E8;137.
  ) 
 Here is how much of TeX's memory you used:
- 31811 strings out of 479321
- 546342 string characters out of 2866501
+ 31826 strings out of 479321
+ 546773 string characters out of 2866501
  1295677 words of memory out of 3000000
- 48284 multiletter control sequences out of 15000+600000
+ 48289 multiletter control sequences out of 15000+600000
  483209 words of font info for 235 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,103p,1583b,1396s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1580,7 +1581,7 @@ r12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/
 type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic
 /uhvro8a.pfb>
-Output written on tcc.pdf (30 pages, 173227 bytes).
+Output written on tcc.pdf (30 pages, 173315 bytes).
 PDF statistics:
  421 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 500000)
