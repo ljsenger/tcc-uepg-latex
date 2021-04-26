@@ -29,6 +29,25 @@ Classe 7 &20.510  &2747 &13,39\% \\
 %\text{\footnotesize Fonte: O autor}
 \end{table}
 
+\section{Exemplo de Código Fonte}
+O código~\ref{code:oddoreven} apresenta um exemplo de uso de listagem de código.
+
+%\lstset{frame=Trbl,numbers=left}
+\begin{lstlisting}[caption={Exemplo de código fonte}, language=Python, label=code:oddoreven]
+	# Python program to check if the input number
+	# is odd or even.
+	# A number is even if division by 2 gives a
+	# remainder of 0.
+	# If the remainder is 1, it is an odd number.
+	
+	num = int(input("Enter a number: "))
+	if (num % 2) == 0:
+		print("{0} is Even".format(num))
+	else:
+		print("{0} is Odd".format(num))
+\end{lstlisting}	
+
+
 \section{Análise dos Dados}
 
 

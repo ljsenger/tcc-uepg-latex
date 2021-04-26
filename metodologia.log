@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.25)  25 APR 2021 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.26)  26 APR 2021 09:17
 entering extended mode
 **./metodologia.tex
 (metodologia.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-03>
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
 ! Undefined control sequence.
 l.1 \chapter
             {Material e Métodos}
@@ -825,6 +825,116 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.32 \section
+             {Exemplo de Código Fonte}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \section{E
+               xemplo de Código Fonte}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no E in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 32--33
+[]
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 32--33
+\/cmr/m/n/10 o
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \begin{lstlisting}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 	t
+       este de código
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 \end{lstlisting}
+                     	
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--37
+[]
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 35--37
+\/cmr/m/n/10 o
+ []
+
+! Undefined control sequence.
+l.39 \section
              {Análise dos Dados}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -839,7 +949,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 \section{A
+l.39 \section{A
                nálise dos Dados}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -859,12 +969,12 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (25.00002pt too wide) in paragraph at lines 32--33
+Overfull \hbox (25.00002pt too wide) in paragraph at lines 39--40
 []\/cmr/m/n/10 a
  []
 
 ! Undefined control sequence.
-l.35 \section
+l.42 \section
              {Cronograma}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -879,7 +989,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \section{C
+l.42 \section{C
                ronograma}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1032,7 +1142,7 @@ Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
 <write> ...rence `tb:atividades' on page \thepage 
                                                   \space undefined\on@line .
-l.38 ...ilustrados nas tabelas \ref{tb:atividades}
+l.45 ...ilustrados nas tabelas \ref{tb:atividades}
                                                    e
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1041,13 +1151,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `tb:atividades' on page  undefined on input line 38.
+LaTeX Warning: Reference `tb:atividades' on page  undefined on input line 45.
 
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...ence `fig:cronograma' on page \thepage 
                                                   \space undefined\on@line .
-l.39 \ref{fig:cronograma}
+l.46 \ref{fig:cronograma}
                          , respectivamente.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1056,7 +1166,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `fig:cronograma' on page  undefined on input line 39.
+LaTeX Warning: Reference `fig:cronograma' on page  undefined on input line 46.
 
 Missing character: There is no , in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -1076,22 +1186,22 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--40
+Overfull \hbox (20.0pt too wide) in paragraph at lines 42--47
 []
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 35--40
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 42--47
 \/cmr/m/n/10 ~a
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 35--40
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 42--47
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 35--40
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 42--47
 []
  []
 
@@ -1102,7 +1212,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \begin{table}
+l.49 \begin{table}
                   [!htb]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1115,7 +1225,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \begin{table}[
+l.49 \begin{table}[
                    !htb]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1133,7 +1243,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 	\caption
+l.51 	\caption
               {Atividades Previstas}\label{tb:atividades}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1322,19 +1432,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \end{table}
+l.66 \end{table}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 42--60
+Overfull \hbox (20.0pt too wide) in paragraph at lines 49--67
 []
  []
 
 
-Overfull \hbox (350.47469pt too wide) in paragraph at lines 42--60
+Overfull \hbox (350.47469pt too wide) in paragraph at lines 49--67
 []
  []
 
@@ -1345,7 +1455,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \begin{figure}
+l.71 \begin{figure}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1358,7 +1468,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 	\caption
+l.72 	\caption
               {Cronograma de Atividades}\label{fig:cronograma}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1370,7 +1480,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 	\caption{C
+l.72 	\caption{C
                 ronograma de Atividades}\label{fig:cronograma}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1404,7 +1514,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 	\begin{gantt}
+l.73 	\begin{gantt}
                    {10}{12}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1421,14 +1531,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 		\begin{ganttitle}
+l.74 		\begin{ganttitle}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.68 			\numtitle
+l.75 			\numtitle
                  {1}{1}{12}{1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1448,14 +1558,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 		\end{ganttitle}
+l.76 		\end{ganttitle}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.70 		\ganttbar
+l.77 		\ganttbar
                 {Revisão da literatura}{0}{2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1484,7 +1594,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.71 		\ganttbarcon
+l.78 		\ganttbarcon
                    {refinamento método}{2}{5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1511,7 +1621,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Undefined control sequence.
-l.72 		\ganttbarcon
+l.79 		\ganttbarcon
                    {}{8}{2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1522,7 +1632,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.73 		\ganttmilestone
+l.80 		\ganttmilestone
                       [color=cyan]{Milestone with color!}{4}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1563,7 +1673,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Undefined control sequence.
-l.74 		\ganttbar
+l.81 		\ganttbar
                 {another task}{2}{2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1585,7 +1695,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.75 		\ganttbar
+l.82 		\ganttbar
                 [color=cyan]{another coloured task}{4}{4}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1627,7 +1737,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Undefined control sequence.
-l.76 		\ganttbar
+l.83 		\ganttbar
                 {another task}{4}{2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1649,7 +1759,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.77 		\ganttcon
+l.84 		\ganttcon
                 {4}{5}{4}{7}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1662,7 +1772,7 @@ Missing character: There is no 5 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 7 in font nullfont!
 ! Undefined control sequence.
-l.78 		\ganttmilestonecon
+l.85 		\ganttmilestonecon
                          {A connected Milestone}{7}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1691,7 +1801,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no 7 in font nullfont!
 ! Undefined control sequence.
-l.79 		\ganttbarcon
+l.86 		\ganttbarcon
                    {another consecutive task}{8}{2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1730,24 +1840,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 	\end{gantt}
+l.87 	\end{gantt}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 65--82
+Overfull \hbox (20.0pt too wide) in paragraph at lines 72--89
 []
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 65--82
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 72--89
 \/cmr/m/n/10 ~a
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 65--82
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 72--89
 \/cmr/m/n/10 e
  []
 
@@ -1758,14 +1868,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 \end{figure}
+l.90 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.84 \section
+l.91 \section
              {Recursos}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1780,7 +1890,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 \section{R
+l.91 \section{R
                ecursos}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1854,7 +1964,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.86 \subsection
+l.93 \subsection
                 {Recursos Humanos}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1878,7 +1988,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.87 \subsection
+l.94 \subsection
                 {Recursos Físicos}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1908,11 +2018,11 @@ Missing character: There is no s in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 43 strings out of 481199
- 684 string characters out of 2915349
- 248111 words of memory out of 3000000
- 15744 multiletter control sequences out of 15000+200000
- 535396 words of font info for 30 fonts, out of 3000000 for 9000
+ 44 strings out of 479321
+ 697 string characters out of 2866501
+ 287614 words of memory out of 3000000
+ 17606 multiletter control sequences out of 15000+600000
+ 403738 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 19i,9n,16p,455b,165s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,42p,467b,167s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

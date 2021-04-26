@@ -38,7 +38,34 @@ brazil				% o último idioma é o principal do documento
 \usepackage{listings}
 \usepackage{gantt}
 \usepackage{inconsolata}
-	
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+%	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	frame=single
+}
+
+\lstset{style=mystyle}
 
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf,
@@ -78,7 +105,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
-\autor{Luciano Jose Senger}
+\autor{Seu Nome Aqui}
 \local{Brasil}
 \data{Outono de 2021}
 \orientador{Nome do orientador}
@@ -255,9 +282,15 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\cleardoublepage
 	% inserir lista de abreviaturas e siglas
 	% ---
+	\pdfbookmark[0]{\lstlistlistingname}{lot}
+	\lstlistoflistings
+	\cleardoublepage
+	% inserir lista de abreviaturas e siglas
 	\begin{siglas}
 		\item[ABNT] Associação Brasileira de Normas Técnicas
-		\item[abnTeX] ABsurdas Normas para TeX
+		\item[UEPG] Universidade Estadual de Ponta Grossa
+		\item[LCAD] Laboratório de Computação de Alto Desempenho
+		
 	\end{siglas}
 	% ---
 	
