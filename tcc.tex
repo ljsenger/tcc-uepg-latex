@@ -183,7 +183,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 \renewcommand{\rmdefault}{phv} % Arial
 \renewcommand{\sfdefault}{phv} % Arial
 
-
+\newlistof{lstlistoflistings}{lol}{\lstlistlistingname}
 \begin{document}
 	
 	\selectlanguage{brazil}
@@ -227,7 +227,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% resumo em inglês
 	%\begin{resumo}[Abstract]
 	%	\begin{otherlanguage*}{english}
-	%		Este é o abstract do trabalho. Lembre-se que conforme o modelo da UEPG, o abstract não é obrigatório 
+	%		Este é o abstract do trabalho. Lembre-se que conforme o modelo da UEPG, o abstract não é obrigatório para trabalhos de conclusão de Curso, mas é obrigatório para dissertações de mestrado e doutorado. 
 			
 	%		\vspace{\onelineskip}
 			
@@ -253,8 +253,8 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\cleardoublepage
 	% inserir lista de abreviaturas e siglas
 	% ---
-	\pdfbookmark[0]{\lstlistlistingname}{lot}
-	\lstlistoflistings
+	%\pdfbookmark[0]{\lstlistlistingname}{lot}
+	\lstlistoflistings*
 	\cleardoublepage
 	% inserir lista de abreviaturas e siglas
 	\begin{siglas}
