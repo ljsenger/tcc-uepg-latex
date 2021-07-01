@@ -157,6 +157,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
 
+
 % configurações para atender às regras da ABNT
 \setfloatadjustment{quadro}{\centering}
 \counterwithout{quadro}{chapter}
@@ -312,6 +313,9 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% Imprime uma página indicando o início dos apêndices
 	\partapendices
 	
+	\renewcommand{\thetable}{\Alph{chapter}\arabic{table}}
+	\setcounter{table}{0}
+
 	% ----------------------------------------------------------
 	\chapter{Quisque libero justo}
 	% ----------------------------------------------------------
