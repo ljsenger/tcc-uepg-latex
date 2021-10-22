@@ -40,6 +40,7 @@ brazil				% o último idioma é o principal do documento
 \usepackage{inconsolata}
 \usepackage{xcolor}
 \usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+
 \setlength\afterchapskip{\lineskip}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -106,19 +107,18 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
-\autor{Seu Nome Aqui}
-\local{Brasil}
-\data{Outono de 2021}
-\orientador{Nome do orientador}
-\coorientador{Equipe \abnTeX}
+\input{titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
+\input{autor} 
+\input{local}
+\input{data}
+\input{orientador}
+\input{coorientador}
 
 	
 \tipotrabalho{Trabalho de Conclusão de Curso}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Trabalho de conclusão de Curso apresentado como requisito parcial para obtenção do
-	título de Bacharel em Engenharia de Computação na Universidade Estadual de Ponta Grossa}
+\input{preambulo}
 
 \definecolor{blue}{RGB}{41,5,195}
 
@@ -206,16 +206,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% ---
 	\imprimirfolhaderosto
 	
-	% ---
-	% Dedicatória
-	% ---
-	\begin{dedicatoria}
-		\vspace*{\fill}
-		\centering
-		\noindent
-		\textit{ Este trabalho é dedicado às crianças adultas que,\\
-			quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-	\end{dedicatoria}
+	\input{dedicatoria}
 	
 	\begin{agradecimentos}
 		\input{agradecimentos}
