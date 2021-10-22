@@ -15,7 +15,7 @@ english,			% idioma adicional para hifenização
 french,				% idioma adicional para hifenização
 spanish,			% idioma adicional para hifenização
 brazil				% o último idioma é o principal do documento
-]{abntex2}
+]{abntex2-uepg}
 
 % ---
 % Pacotes básicos 
@@ -39,6 +39,8 @@ brazil				% o último idioma é o principal do documento
 \usepackage{gantt}
 \usepackage{inconsolata}
 \usepackage{xcolor}
+\usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+\setlength\afterchapskip{\lineskip}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -129,10 +131,10 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	pdfcreator={LaTeX with abnTeX2},
 	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
 	colorlinks=true,       		% false: boxed links; true: colored links
-	linkcolor=blue,          	% color of internal links
-	citecolor=blue,        		% color of links to bibliography
+	linkcolor=black,          	% color of internal links
+	citecolor=black,        		% color of links to bibliography
 	filecolor=magenta,      		% color of file links
-	urlcolor=blue,
+	urlcolor=black,
 	bookmarksdepth=4
 }
 \makeatother
@@ -176,6 +178,11 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+%ljsenger - espaçamento simples (e feio) entre parágrafos
+\setlength{\parskip}{0cm}
+%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
+\setlength\afterchapskip{18pt}
 
 % compila o indice
 \makeindex
@@ -239,6 +246,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	
 	% inserir lista de ilustrações
 	% ---
+	\renewcommand{\listfigurename}{Lista de figuras}
 	\pdfbookmark[0]{\listfigurename}{lof}
 	\listoffigures*
 	\cleardoublepage
@@ -280,7 +288,6 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% ----------------------------------------------------------
 	\textual
 	
-
 	\include{introducao}
 	\include{revisao}
 	\include{metodologia}
@@ -288,8 +295,8 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\include{conclusao}
 	
 	\postextual
-
-
+	%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
+	\setlength\afterchapskip{18pt}
 	%\bibliographystyle{abntex2-alf}
 	\bibliography{base}
 
@@ -311,7 +318,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 \begin{apendicesenv}
 	
 	% Imprime uma página indicando o início dos apêndices
-	\partapendices
+	%\partapendices
 	
 	\renewcommand{\thetable}{\Alph{chapter}\arabic{table}}
 	\setcounter{table}{0}
@@ -342,7 +349,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 \begin{anexosenv}
 	
 	% Imprime uma página indicando o início dos anexos
-	\partanexos
+	%\partanexos
 	
 	% ---
 	\chapter{Morbi ultrices rutrum lorem.}
