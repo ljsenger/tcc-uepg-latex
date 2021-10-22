@@ -27,7 +27,33 @@
 % Configuração de posicionamento padrão:
 %%\setfloatlocations{codigo}{hbtp}
 
+% ljsenger (21/10/2021) start
 
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
+
+% fonte e tamanho para nomes de capítulo e seção
+\renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont}
+\renewcommand{\ABNTEXchapterfontsize}{\large}
+\renewcommand{\ABNTEXsectionfontsize}{\large\fontseries{n}\selectfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\large\fontseries{n}\selectfont}
+
+%mudança para lista de figuras
+\renewcommand{\listfigurename}{Lista de figuras}
+
+% espaçamento entre a numeração da seção e o nome da seção
+\makeatletter % access to internal commands
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\ }
+\makeatother
+% sumário...
+\renewcommand{\cftsectionfont}{\normalfont}
+\renewcommand{\cftsectionpagefont}{\cftsectionfont}
+\renewcommand{\cftsubsectionfont}{\normalfont}
+\renewcommand{\cftsubsectionpagefont}{\cftsubsubsectionfont}
+% espaçamento (horrivel) simples entre parágrafos
+\setlength{\parskip}{18pt}
+% ljsenger (21/10/2021) end
 
 % alterando a capa
 \renewcommand{\imprimircapa}{%
@@ -75,16 +101,16 @@
 \ABNTEXchapterfont\Large\imprimirtitulo
 \end{center}
 
-\vspace*{\fill}
+%\vspace*{\fill}
 
 \abntex@ifnotempty{\imprimirpreambulo}{%
   \hspace{.45\textwidth}
   \begin{minipage}{.5\textwidth}
   \SingleSpacing
   \imprimirpreambulo\\
-  \imprimirorientador\\
+  \\\imprimirorientador\\
   \abntex@ifnotempty{\imprimircoorientador}{%
-  	{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+  	{\imprimircoorientadorRotulo~\imprimircoorientador}%
   }
   \end{minipage}%
   \vspace*{\fill}
