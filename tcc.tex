@@ -313,18 +313,22 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	
 	\renewcommand{\thetable}{\Alph{chapter}\arabic{table}}
 	\setcounter{table}{0}
+	\clearpage
+		\begingroup%
+		\makeatletter%
+		\let\clearpage\relax% Stop LaTeX from going to a new page; and
+		\vspace*{\fill}%
+		\vspace*{\dimexpr-50\p@-\baselineskip}% Remove the initial (default) 50pt gap (plus 1 line)
+		\chapter{Análise Estatística}
+		%Some text here...
+		\vspace*{\fill}%
+		\endgroup 
+		\clearpage
 
-	% ----------------------------------------------------------
-	\chapter{Quisque libero justo}
 	% ----------------------------------------------------------
 	
 	\lipsum[50]
 	
-	% ----------------------------------------------------------
-	\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-		ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-	% ----------------------------------------------------------
-	\lipsum[55-57]
 	
 \end{apendicesenv}
 % ---
@@ -343,23 +347,10 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	%\partanexos
 	
 	% ---
-	\chapter{Morbi ultrices rutrum lorem.}
+	\chapter{Laudo técnico}
 	% ---
 	\lipsum[30]
-	
-	% ---
-	\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-		parturient montes nascetur ridiculus mus}
-	% ---
-	
-	\lipsum[31]
-	
-	% ---
-	\chapter{Fusce facilisis lacinia dui}
-	% ---
-	
-	\lipsum[32]
-	
+		
 \end{anexosenv}
 
 %---------------------------------------------------------------------
