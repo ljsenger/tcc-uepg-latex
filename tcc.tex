@@ -40,6 +40,8 @@ brazil				% o último idioma é o principal do documento
 \usepackage{inconsolata}
 \usepackage{xcolor}
 \usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+\usepackage{titlesec}
+\titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus .2ex}{2.5ex plus .2ex} 
 
 \setlength\afterchapskip{\lineskip}
 
@@ -320,10 +322,10 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 		\vspace*{\fill}%
 		\vspace*{\dimexpr-50\p@-\baselineskip}% Remove the initial (default) 50pt gap (plus 1 line)
 		\chapter{Análise Estatística}
-		%Some text here...
+		% inserir aqui o texto do apendice via \input{}
 		\vspace*{\fill}%
 		\endgroup 
-		\clearpage
+	\clearpage
 
 	% ----------------------------------------------------------
 	

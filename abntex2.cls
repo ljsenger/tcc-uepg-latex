@@ -1,5 +1,5 @@
-%% abntex2.cls, v-1.9.7 laurocesar
-%% Copyright 2012-2018 by abnTeX2 group at https://www.abntex.net.br/ 
+%% abntex2.cls, v<VERSION> laurocesar
+%% Copyright 2012-<COPYRIGHT_YEAR> by abnTeX2 group at https://www.abntex.net.br/ 
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -12,7 +12,7 @@
 %% This work has the LPPL maintenance status `maintained'.
 %% 
 %% The Current Maintainer of this work is the abnTeX2 team, led
-%% by Lauro CÃ©sar Araujo. Further information are available on 
+%% by Lauro César Araujo. Further information are available on 
 %% https://www.abntex.net.br/
 %%
 %% This work consists of the file abntex2.cls.
@@ -23,7 +23,7 @@
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-uepg}[2018/11/24 v-1.9.7 abnTeX2]
+\ProvidesClass{abntex2}[<CURRENT_DATE> v<VERSION> abnTeX2]
 \RequirePackage{ifthen}
 %
 % Captura as options article e twocolumn
@@ -58,9 +58,9 @@
 \DeclareOption{subsubsection=TITLE}{\setboolean{ABNTEXuppersubsubsection}{true}}
 \DeclareOption{subsubsubsection=TITLE}{\setboolean{ABNTEXuppersubsubsubsection}{true}}
 %
-% OpÃ§Ãµes de diagramaÃ§Ã£o de sumÃ¡rios
-% sumario=tradicional    : SumÃ¡rio tradicional do LaTeX/Memoir
-% sumario=abnt-6027-2012 : SumÃ¡rio conforme recomendaÃ§Ã£o da ABNT NBR 6027:2012
+% Opções de diagramação de sumários
+% sumario=tradicional    : Sumário tradicional do LaTeX/Memoir
+% sumario=abnt-6027-2012 : Sumário conforme recomendação da ABNT NBR 6027:2012
 \newboolean{ABNTEXsumario-tradicional}     %true=titles of chapter/appendix in uppercase
 \newboolean{ABNTEXsumario-abnt-6027-2012} 
 \setboolean{ABNTEXsumario-tradicional}{false}
@@ -80,7 +80,7 @@
 \ProcessOptions\relax
 \LoadClass{memoir}
 
-% sumario=abnt-6027-2012 : SumÃ¡rio conforme recomendaÃ§Ã£o da ABNT NBR 6027:2012, que
+% sumario=abnt-6027-2012 : Sumário conforme recomendação da ABNT NBR 6027:2012, que
 %    soh pode ser usado com memoir v3.6k ou superior
 %    \settocpreprocessor \changes{v3.6k}{2012/09/18}{Added}
 \ifdefined\settocpreprocessor
@@ -336,15 +336,15 @@
 %\captionnamefont{\ABNTEXfontereduzida}
 %\captiontitlefont{\ABNTEXfontereduzida}
 
-% Para uso com pacotes subfig e caption dentro do memoir se estes forem carregados ou nÃ£o.
-% Ã‰ necessÃ¡rio para que os comandos \IBGEtab e \fonte funcionem 
+% Para uso com pacotes subfig e caption dentro do memoir se estes forem carregados ou não.
+% É necessário para que os comandos \IBGEtab e \fonte funcionem 
 % independente do carregamento de pacotes externos ao memoir que tratam captions.
 \newcommand{\IBGEtabfontsize}{\ABNTEXfontereduzida}
 \AtBeginDocument{%
   % comandos auxiliares para manipular os captions dentro do comando \IBGEtab.
   \newcommand{\configurecaptions}{\captionstyle[\raggedright]{}}
   \newcommand{\configureseparator}{\captiondelim{\ABNTEXcaptiondelim}}
-  % Define o comando \IBGEtab{}{}{} com caption e legenda da largura do conteÃºdo tabular, tabular*, etc
+  % Define o comando \IBGEtab{}{}{} com caption e legenda da largura do conteúdo tabular, tabular*, etc
   % Parece funcionar com qualque pacote
   \newsavebox{\myptabbox}
   \newlength{\myptabboxwidth}
@@ -365,7 +365,7 @@
   \let\ibgetab\IBGEtab  
 }
 
-% Define o comando \fonte que respeita as configuraÃ§Ãµes de caption do memoir ou do caption
+% Define o comando \fonte que respeita as configurações de caption do memoir ou do caption
 \newcommand{\fonte}[2][\fontename]{%
   \M@gettitle{#2}%
   \memlegendinfo{#2}%
@@ -381,7 +381,7 @@
      \@makecaption{\ABNTEXfontereduzida #1}{\ignorespaces\ABNTEXfontereduzida #2}\par
   \endgroup}
 
-% Define o comando \notas que respeita as configuraÃ§Ãµes de caption do memoir ou do caption
+% Define o comando \notas que respeita as configurações de caption do memoir ou do caption
 \newcommand{\nota}[2][\notaname]{\fonte[#1]{#2}}
 
 
@@ -441,11 +441,11 @@
 % leaders para os capitulos
 \renewcommand*{\cftchapterdotsep}{\cftdotsep}
 
-% suprime espaÃ§o entre os itens de listings de diferentes capÃ­tulos 
+% suprime espaço entre os itens de listings de diferentes capítulos 
 \setlength{\cftbeforechapterskip}{0pt plus 0pt}
 \renewcommand*{\insertchapterspace}{}
 
-% macros para configurar o SumÃ¡rio conforme 6027-2012 ou tradicional cft
+% macros para configurar o Sumário conforme 6027-2012 ou tradicional cft
 \cftinsertcode{A}{}
 
 \newlength{\cftlastnumwidth}
@@ -462,9 +462,9 @@
 \cftinsertcode{A}{\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}}
 
 % No caso de Sumario (TOC) tradicional
-\ifthenelse{\boolean{ABNTEXsumario-tradicional}}{}{} % essa linha nÃ£o faz nada,
+\ifthenelse{\boolean{ABNTEXsumario-tradicional}}{}{} % essa linha não faz nada,
                                                      % mas se houver necessidade de alterar o comportamento
-                                                     % do sumÃ¡rio tradicional altere aqui.
+                                                     % do sumário tradicional altere aqui.
 
 % No caso de Sumario (TOC) especifico da ABNT-6027-2012
 
@@ -497,24 +497,18 @@
     \addtocontents{toc}{\cftsetindents{chapter}{0em}{\cftlastnumwidth}}}
   %
   \renewcommand{\tocinnonumchapter}{%
-    %\addtocontents{toc}{\cftsetindents{chapter}{\cftlastnumwidth}{2em}}%
-    \addtocontents{toc}{\cftsetindents{chapter}{0em}{2em}}%
+    \addtocontents{toc}{\cftsetindents{chapter}{\cftlastnumwidth}{2em}}%
     \cftinserthook{toc}{A}}
   %
   \renewcommand{\tocprintchapternonum}{%
-    %\addtocontents{toc}{\cftsetindents{chapter}{\cftlastnumwidth}{2em}}
-    \addtocontents{toc}{\cftsetindents{chapter}{0em}{2em}}
-  }
-    
+    \addtocontents{toc}{\cftsetindents{chapter}{\cftlastnumwidth}{2em}}}
   %
   \renewcommand{\tocpartapendices}{%
-  %  \addtocontents{toc}{\cftsetindents{part}{\cftlastnumwidth}{2em}}
-  \addtocontents{toc}{\cftsetindents{part}{0em}{2em}}
+    \addtocontents{toc}{\cftsetindents{part}{\cftlastnumwidth}{2em}}
     \cftinserthook{toc}{A}}
   %
   \renewcommand{\tocpartanexos}{%
-   % \addtocontents{toc}{\cftsetindents{part}{\cftlastnumwidth}{2em}}
-    \addtocontents{toc}{\cftsetindents{part}{0em}{0em}}
+    \addtocontents{toc}{\cftsetindents{part}{\cftlastnumwidth}{2em}}
     \cftinserthook{toc}{A}}
   %
   \setlength{\cftbeforechapterskip}{1em}
@@ -529,7 +523,7 @@
   \renewcommand{\cftsectionfont}{\bfseries}
   \renewcommand{\cftsectionpagefont}{\cftsectionfont}
   %
-  \renewcommand{\cftsubsectionfont}{\normalsize }
+  \renewcommand{\cftsubsectionfont}{\normalsize}
   \renewcommand{\cftsubsectionpagefont}{\cftsubsectionfont}
   %
   \renewcommand{\cftsubsubsectionfont}{\small}
@@ -701,7 +695,8 @@
 \newcommand{\imprimirtitulo}{\thetitle}
 
 % Comandos de dados - titulo do documento
-\newcommand{\tituloestrangeiro}[1]{\providecommand{\theforeigntitle}{#1}}
+\providecommand{\theforeigntitle}[1]{}
+\newcommand{\tituloestrangeiro}[1]{\renewcommand{\theforeigntitle}{#1}}
 \newcommand{\imprimirtituloestrangeiro}{\theforeigntitle}
 
 
@@ -765,7 +760,7 @@
 
 % ---
 % Ficha catalografica (Dados internacionais de
-% catalogaÃ§Ã£o-na-publicacao)
+% catalogação-na-publicacao)
 \newenvironment{fichacatalografica}{%
     \thispagestyle{empty}
     \begin{SingleSpacing}
@@ -819,20 +814,20 @@
 % ---
 % Resumo e abstracts em diferentes idiomas - NBR 14724/2011
 
-% altera as margens padrÃµes do memoir para abstract caso nao seja article
+% altera as margens padrões do memoir para abstract caso nao seja article
 \ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
-    % em artigos, margens e fontes sÃ£o as mesmas de memoir
+    % em artigos, margens e fontes são as mesmas de memoir
   }{ % else
   	% Ajusta as margens para serem a mesma do documento
     \setlength\absleftindent{0cm}
     \setlength\absrightindent{0cm}
-    % Garante que a fonte do texto do abstract serÃ¡ a mesma do documento, pois
-    % na classe memoir estÃ¡ \small
+    % Garante que a fonte do texto do abstract será a mesma do documento, pois
+    % na classe memoir está \small
     \renewcommand{\abstracttextfont}{\normalfont\normalsize}
   }
   
-% A norma nÃ£o diz nada sobre identaÃ§Ã£o e separaÃ§Ã£o entre parÃ¡grafos no abstract,
-% porÃ©m o uso mostra que muitos abstracts sÃ£o montados sem identaÃ§Ã£o.
+% A norma não diz nada sobre identação e separação entre parágrafos no abstract,
+% porém o uso mostra que muitos abstracts são montados sem identação.
 \AtBeginDocument{%
    \setlength{\absparindent}{0pt}
 }
@@ -1039,7 +1034,7 @@
 % ------------------------------------------------------------------------
 
 % ---
-% ImpressÃ£o da Capa
+% Impressão da Capa
 \newcommand{\imprimircapa}{%
   \begin{capa}%
     \center
@@ -1064,9 +1059,9 @@
 % ---
 % Folha de rosto
 %   usar \imprimirfolhaderosto* casodeseje imprimir algo no verso da
-%   pÃ¡gina no caso de estar no modo twoside. Util para imprimir a Ficha
+%   página no caso de estar no modo twoside. Util para imprimir a Ficha
 %   Bibliografica. Porem, se estiver no modo oneside, a versao sem estrela
-%   Ã© identica.
+%   é identica.
 \newenvironment{folhaderosto}[1][\folhaderostoname]{\clearpage\PRIVATEbookmarkthis{#1}}{\cleardoublepage}
 \newenvironment{folhaderosto*}[1][\folhaderostoname]{\clearpage\PRIVATEbookmarkthis{#1}}{\newpage}%
 
