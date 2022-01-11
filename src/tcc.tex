@@ -15,7 +15,7 @@ english,			% idioma adicional para hifenização
 french,				% idioma adicional para hifenização
 spanish,			% idioma adicional para hifenização
 brazil				% o último idioma é o principal do documento
-]{src/lib/abntex2-uepg}
+]{lib/abntex2-uepg}
 
 % ---
 % Pacotes básicos 
@@ -27,7 +27,7 @@ brazil				% o último idioma é o principal do documento
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação]
-\usepackage{src/lib/uepg}
+\usepackage{lib/uepg}
 \usepackage{lipsum}		
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -36,7 +36,7 @@ brazil				% o último idioma é o principal do documento
 \usepackage{lscape}
 \usepackage{longtable}	
 \usepackage{listings}
-\usepackage{src/lib/gantt}
+\usepackage{lib/gantt}
 \usepackage{inconsolata}
 \usepackage{xcolor}
 \usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
@@ -80,7 +80,7 @@ abnt-etal-text = it, % escreve o et al., em italico;
 abnt-and-type = &, % usa o carater '&' no lugar de 'e' para mais de um autor;
 abnt-last-names = abnt, % trata sobrenomes 'estritamente' conforme a ABNT; e
 abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
-]{src/lib/abntex2cite}
+]{lib/abntex2cite}
 
 % ---
 % Configurações do pacote backref
@@ -109,18 +109,18 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\input{src/conf/titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
-\input{src/conf/autor} 
-\input{src/conf/local}
-\input{src/conf/data}
-\input{src/conf/orientador}
-\input{src/conf/coorientador}
+\input{conf/titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
+\input{conf/autor} 
+\input{conf/local}
+\input{conf/data}
+\input{conf/orientador}
+\input{conf/coorientador}
 
 	
 \tipotrabalho{Trabalho de Conclusão de Curso}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\input{src/conf/preambulo}
+\input{conf/preambulo}
 
 \definecolor{blue}{RGB}{41,5,195}
 
@@ -208,10 +208,10 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% ---
 	\imprimirfolhaderosto
 	
-	\input{src/pre-textual-elements/dedicatoria}
+	\input{pre-textual-elements/dedicatoria}
 	
 	\begin{agradecimentos}
-		\input{src/pre-textual-elements/agradecimentos}
+		\input{pre-textual-elements/agradecimentos}
 		
 	\end{agradecimentos}
 	% ---
@@ -219,10 +219,10 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% ---
 	% Epígrafe
 	% ---
-	\input{src/pre-textual-elements/epigrafe}
+	\input{pre-textual-elements/epigrafe}
 	\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 	\begin{resumo}
-		\input{src/pre-textual-elements/resumo}
+		\input{pre-textual-elements/resumo}
 	\end{resumo}
 	
 	% resumo em inglês
@@ -260,7 +260,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\cleardoublepage
 	% inserir lista de abreviaturas e siglas
 	\begin{siglas}
-		\input{src/pre-textual-elements/siglas}
+		\input{pre-textual-elements/siglas}
 	\end{siglas}
 	% ---
 	
@@ -268,7 +268,7 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% inserir lista de símbolos
 	% ---
 	\begin{simbolos}
-		\input{src/pre-textual-elements/simbolos}
+		\input{pre-textual-elements/simbolos}
 	\end{simbolos}
 	% ---
 	
@@ -281,17 +281,17 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	% ----------------------------------------------------------
 	\textual
 	
-	\include{src/chapters/introducao}
-	\include{src/chapters/revisao}
-	\include{src/chapters/metodologia}
-	\include{src/chapters/resultados}
-	\include{src/chapters/conclusao}
+	\include{chapters/introducao}
+	\include{chapters/revisao}
+	\include{chapters/metodologia}
+	\include{chapters/resultados}
+	\include{chapters/conclusao}
 	
 	\postextual
 	%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
 	\setlength\afterchapskip{18pt}
 	%\bibliographystyle{abntex2-alf}
-	\bibliography{src/bibliography/base}
+	\bibliography{bibliography/base}
 
 % ----------------------------------------------------------
 % Glossário
