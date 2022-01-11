@@ -109,18 +109,18 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\input{titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
-\input{autor} 
-\input{local}
-\input{data}
-\input{orientador}
-\input{coorientador}
+\input{src/conf/titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
+\input{src/conf/autor} 
+\input{src/conf/local}
+\input{src/conf/data}
+\input{src/conf/orientador}
+\input{src/conf/coorientador}
 
 	
 \tipotrabalho{Trabalho de Conclusão de Curso}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\input{preambulo}
+\input{src/conf/preambulo}
 
 \definecolor{blue}{RGB}{41,5,195}
 
