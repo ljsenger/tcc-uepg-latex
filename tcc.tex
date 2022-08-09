@@ -1,0 +1,365 @@
+
+\documentclass[
+% -- opções da classe memoir --
+12pt,				% tamanho da fonte
+openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+oneside,			% para impressão em recto e verso. Oposto a oneside
+a4paper,			% tamanho do papel. 
+% -- opções da classe abntex2 --
+chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+% -- opções do pacote babel --
+english,			% idioma adicional para hifenização
+french,				% idioma adicional para hifenização
+spanish,			% idioma adicional para hifenização
+brazil				% o último idioma é o principal do documento
+]{abntex2-uepg}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação]
+\usepackage{uepg}
+\usepackage{lipsum}		
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{paralist}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{longtable}	
+\usepackage{listings}
+\usepackage{gantt}
+\usepackage{inconsolata}
+\usepackage{xcolor}
+\usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+\usepackage{titlesec}
+\titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus .2ex}{2.5ex plus .2ex} 
+
+\setlength\afterchapskip{\lineskip}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+%	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	frame=single
+}
+
+\lstset{style=mystyle}
+
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf,
+abnt-emphasize = bf, % destaca o titulo da revista ou livro em negrito;
+abnt-etal-list = 3, % trabalhos com mais de 3 autores recebem et al.,;
+abnt-etal-text = it, % escreve o et al., em italico;
+abnt-and-type = &, % usa o carater '&' no lugar de 'e' para mais de um autor;
+abnt-last-names = abnt, % trata sobrenomes 'estritamente' conforme a ABNT; e
+abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
+]{abntex2cite}
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+	Nenhuma citação no texto.%
+	\or
+	Citado na página #2.%
+	\else
+	Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+% -- ljsenger
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+% formatacao de codigo fonte
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de códigos}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\input{titulo}% \titulo{Formatação de trabalhos para a UEPG com o uso da classe \abnTeX}
+\input{autor} 
+\input{local}
+\input{data}
+\input{orientador}
+\input{coorientador}
+
+	
+\tipotrabalho{Trabalho de Conclusão de Curso}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\input{preambulo}
+
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+\hypersetup{
+	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=black,          	% color of internal links
+	citecolor=black,        		% color of links to bibliography
+	filecolor=magenta,      		% color of file links
+	urlcolor=black,
+	bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
+% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
+\makeatletter
+\setlength{\@fptop}{5pt} % Set distance from top of page to first float
+\makeatother
+% ---
+
+% ---
+% Possibilita criação de Quadros e Lista de quadros.
+% Ver https://github.com/abntex/abntex2/issues/176
+%
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+%ljsenger - espaçamento simples (e feio) entre parágrafos
+\setlength{\parskip}{0cm}
+%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
+\setlength\afterchapskip{18pt}
+
+% compila o indice
+\makeindex
+% ---
+% padrão UEPG - fonte ARIAL (ou times)
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+\newlistof{lstlistoflistings}{lol}{\lstlistlistingname}
+\begin{document}
+	
+	\selectlanguage{brazil}
+	\frenchspacing 
+	
+	\imprimircapa
+	% ---
+	
+	% ---
+	% Folha de rosto
+	% (o * indica que haverá a ficha bibliográfica)
+	% ---
+	\imprimirfolhaderosto
+	
+	\input{dedicatoria}
+	
+	\begin{agradecimentos}
+		\input{agradecimentos}
+		
+	\end{agradecimentos}
+	% ---
+	
+	% ---
+	% Epígrafe
+	% ---
+	\input{epigrafe}
+	\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+	\begin{resumo}
+		\input{resumo}
+	\end{resumo}
+	
+	% resumo em inglês
+	%\begin{resumo}[Abstract]
+	%	\begin{otherlanguage*}{english}
+	%		Este é o abstract do trabalho. Lembre-se que conforme o modelo da UEPG, o abstract não é obrigatório para trabalhos de conclusão de Curso, mas é obrigatório para dissertações de mestrado e doutorado. 
+			
+	%		\vspace{\onelineskip}
+			
+	%		\noindent 
+	%		\textbf{Keywords}: latex. abntex. text editoration.
+	%	\end{otherlanguage*}
+	%\end{resumo}
+	
+	% inserir lista de ilustrações
+	% ---
+	\renewcommand{\listfigurename}{Lista de figuras}
+	\pdfbookmark[0]{\listfigurename}{lof}
+	\listoffigures*
+	\cleardoublepage
+	% inserir lista de quadros
+	% ---
+	\pdfbookmark[0]{\listofquadrosname}{loq}
+	\listofquadros*
+	\cleardoublepage
+	% inserir lista de tabelas
+	% ---
+	\pdfbookmark[0]{\listtablename}{lot}
+	\listoftables*
+	\cleardoublepage
+	% inserir lista de abreviaturas e siglas
+	% ---
+	%\pdfbookmark[0]{\lstlistlistingname}{lot}
+	\lstlistoflistings*
+	\cleardoublepage
+	% inserir lista de abreviaturas e siglas
+	\begin{siglas}
+		\input{siglas}
+	\end{siglas}
+	% ---
+	
+	% ---
+	% inserir lista de símbolos
+	% ---
+	\begin{simbolos}
+		\input{simbolos}
+	\end{simbolos}
+	% ---
+	
+	% ---
+	% inserir o sumario
+	% ---
+	\pdfbookmark[0]{\contentsname}{toc}
+	\tableofcontents*
+	\cleardoublepage
+	% ----------------------------------------------------------
+	\textual
+	
+	\include{introducao}
+	\include{revisao}
+	\include{metodologia}
+	\include{resultados}
+	\include{conclusao}
+	
+	\postextual
+	%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
+	\setlength\afterchapskip{18pt}
+	%\bibliographystyle{abntex2-alf}
+	\bibliography{base}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+	
+	% Imprime uma página indicando o início dos apêndices
+	%\partapendices
+	
+	\renewcommand{\thetable}{\Alph{chapter}\arabic{table}}
+	\setcounter{table}{0}
+	\clearpage
+		\begingroup%
+		\makeatletter%
+		\let\clearpage\relax% Stop LaTeX from going to a new page; and
+		\vspace*{\fill}%
+		\vspace*{\dimexpr-50\p@-\baselineskip}% Remove the initial (default) 50pt gap (plus 1 line)
+		\chapter{Análise Estatística}
+		% inserir aqui o texto do apendice via \input{}
+		\vspace*{\fill}%
+		\endgroup 
+	\clearpage
+
+	% ----------------------------------------------------------
+	
+	\lipsum[50]
+	
+	
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+	
+	% Imprime uma página indicando o início dos anexos
+	%\partanexos
+	
+	% ---
+	\chapter{Laudo técnico}
+	% ---
+	\lipsum[30]
+		
+\end{anexosenv}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}	
