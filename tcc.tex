@@ -79,8 +79,7 @@ abnt-etal-list = 3, % trabalhos com mais de 3 autores recebem et al.,;
 abnt-etal-text = it, % escreve o et al., em italico;
 abnt-and-type = &, % usa o carater '&' no lugar de 'e' para mais de um autor;
 abnt-last-names = abnt, % trata sobrenomes 'estritamente' conforme a ABNT; e
-abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
-]{abntex2cite}
+abnt-repeated-author-omit = no] {abntex2cite}
 
 % ---
 % Configurações do pacote backref
@@ -290,7 +289,8 @@ abnt-repeated-author-omit = no % autores com + de uma entrada recebem '____.'
 	\postextual
 	%ljsenger - espaçamento entre o título e o primeiro parágrafo do texto
 	\setlength\afterchapskip{18pt}
-	%\bibliographystyle{abntex2-alf}
+	%ljsenger - adeus a caixa alta
+	\bibliographystyle{tcc-uepg}
 	\bibliography{base}
 
 % ----------------------------------------------------------
