@@ -2151,10 +2151,10 @@ EXECUTE {end.bib}
 FUNCTION {apresentacao}
 { "+---------------------------------------------------------+"
   "| http://www.abntex.net.br/  - TCC UEPG                    |"
-  "| Em caso de dÃºvidas ou problemas com este estilo procure |"
+  "| Em caso de duvidas ou problemas com este estilo procure |"
   abnt.alf
- {"| Estilo bibliogrÃ¡fico abntex2-alf.bst versÃ£o " abnt.bst.revision * "          |" *}
- {"| Estilo bibliogrÃ¡fico abntex2-num.bst versÃ£o " abnt.bst.revision * "          |" *}
+ {"| Estilo bibliografico abntex2-alf.bst versao " abnt.bst.revision * "          |" *}
+ {"| Estilo bibliografico abntex2-num.bst versao " abnt.bst.revision * "          |" *}
  if$
   "+---------------------------------------------------------+"
   stack$
